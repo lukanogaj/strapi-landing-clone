@@ -73,7 +73,7 @@ function renderHeader(container) {
 	topMenu.appendChild(logo);
 
 	menuItems.forEach((itemText) => {
-		const item = createElement("li", "list-item", "menu-items");
+		const item = createElement("li", "list-item");
 		item.textContent = itemText;
 		topMenu.appendChild(item);
 	});
