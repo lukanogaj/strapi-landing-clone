@@ -11,11 +11,14 @@ export function renderHero(container) {
 	announcementBadge.textContent = "New";
 	announcement.appendChild(announcementBadge);
 
-	const announcementText = createElement("div", "paragrh1");
+	const announcementText = createElement("div", "announcement-text");
 	announcementText.textContent = "Strapi closes $31M Series B";
 	announcement.appendChild(announcementText);
 
-	const announcementLinkWrapper = createElement("div", "href1");
+	const announcementLinkWrapper = createElement(
+		"div",
+		"announcement-link-wrap",
+	);
 	announcement.appendChild(announcementLinkWrapper);
 
 	const announcementLink = createElement("a", "hrefLink");

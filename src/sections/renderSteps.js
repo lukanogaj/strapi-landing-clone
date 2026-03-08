@@ -1,10 +1,10 @@
 import { createElement } from "../utils/createElement.js";
 
 export function renderSteps(container) {
-	const stepsSection = createElement("section", "step-div");
+	const stepsSection = createElement("section", "steps-section");
 	container.appendChild(stepsSection);
 
-	const stepsHeadings = createElement("div", "stepby-headings");
+	const stepsHeadings = createElement("div", "steps-headings");
 	stepsSection.appendChild(stepsHeadings);
 
 	const stepEyebrow = createElement("h5", "head-h5");
@@ -20,13 +20,60 @@ export function renderSteps(container) {
 		"Make a flexible data structure in 2 minutes. Use our powerful features to customize your API";
 	stepsHeadings.appendChild(stepSubtitle);
 
-	const stepsContent = createElement("div", "step-div-2");
+	const stepsContent = createElement("div", "steps-layout");
 	stepsSection.appendChild(stepsContent);
 
-	const leftVisual = createElement("div", "stepdiv-1");
+	const leftVisual = createElement("div", "steps-visual");
 	stepsContent.appendChild(leftVisual);
 
-	const rightContent = createElement("div", "stepdiv-2");
+	const mockWindow = createElement("div", "mock-window");
+	leftVisual.appendChild(mockWindow);
+
+	const mockTopbar = createElement("div", "mock-topbar");
+	mockWindow.appendChild(mockTopbar);
+
+	const mockDots = createElement("div", "mock-dots");
+	mockTopbar.appendChild(mockDots);
+
+	for (let i = 0; i < 3; i += 1) {
+		const dot = createElement("span", "mock-dot");
+		mockDots.appendChild(dot);
+	}
+
+	const mockLayout = createElement("div", "mock-layout");
+	mockWindow.appendChild(mockLayout);
+
+	const mockSidebar = createElement("div", "mock-sidebar");
+	mockLayout.appendChild(mockSidebar);
+
+	for (let i = 0; i < 5; i += 1) {
+		const sidebarLine = createElement("div", "mock-sidebar-line");
+		mockSidebar.appendChild(sidebarLine);
+	}
+
+	const mockContent = createElement("div", "mock-content");
+	mockLayout.appendChild(mockContent);
+
+	const mockBadge = createElement("div", "mock-badge");
+	mockBadge.textContent = "Content Type Builder";
+	mockContent.appendChild(mockBadge);
+
+	const mockHeading = createElement("div", "mock-heading");
+	mockContent.appendChild(mockHeading);
+
+	const mockRow = createElement("div", "mock-row");
+	mockContent.appendChild(mockRow);
+
+	const mockCardPrimary = createElement("div", "mock-card mock-card-primary");
+	mockRow.appendChild(mockCardPrimary);
+
+	const mockCardSecondary = createElement("div", "mock-card");
+	mockRow.appendChild(mockCardSecondary);
+
+	const mockFooterLine = createElement("div", "mock-footer-line");
+	mockContent.appendChild(mockFooterLine);
+
+	const rightContent = createElement("div", "steps-text");
 	stepsContent.appendChild(rightContent);
 
 	const stepNumber = createElement("h5", "head-h5");

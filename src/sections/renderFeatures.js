@@ -21,11 +21,11 @@ export function renderFeatures(container) {
 		"Building self-hosted, customizable, and performant content API has never been easier";
 	headings.appendChild(subtitle);
 
-	const cardsWrapper = createElement("div", "wrap-main-div");
+	const cardsWrapper = createElement("div", "features-grid");
 	wrapper.appendChild(cardsWrapper);
 
 	featureCards.forEach(({ title: cardTitle, description }) => {
-		const card = createElement("div", "wrapper-divs");
+		const card = createElement("div", "feature-card");
 		cardsWrapper.appendChild(card);
 
 		const heading = createElement("h3", "wrap-main-head");
