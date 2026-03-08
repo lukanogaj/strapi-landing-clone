@@ -187,8 +187,8 @@ function renderFeatures(container) {
 	headings.appendChild(title);
 
 	const subtitle = createElement("h3", "head-h3");
-	subtitle.innerHTML =
-		"Building self-hosted, customizable, and performant content API <br> has never been easier";
+	subtitle.textContent =
+		"Building self-hosted, customizable, and performant content API has never been easier";
 	headings.appendChild(subtitle);
 
 	const cardsWrapper = createElement("div", "wrap-main-div");
@@ -224,8 +224,8 @@ function renderSteps(container) {
 	stepsHeadings.appendChild(stepTitle);
 
 	const stepSubtitle = createElement("h3", "head-h3");
-	stepSubtitle.innerHTML =
-		"Make a flexible data structure in 2 minutes.<br>Use our powerful features to customize your API";
+	stepSubtitle.textContent =
+		"Make a flexible data structure in 2 minutes. Use our powerful features to customize your API";
 	stepsHeadings.appendChild(stepSubtitle);
 
 	const stepsContent = createElement("div", "step-div-2");
@@ -242,13 +242,13 @@ function renderSteps(container) {
 	rightContent.appendChild(stepNumber);
 
 	const stepHeading = createElement("h3", "wrap-main-head");
-	stepHeading.innerHTML =
-		"Effortlessly create content<br>structures that flex to your needs";
+	stepHeading.textContent =
+		"Effortlessly create content structures that flex to your needs";
 	rightContent.appendChild(stepHeading);
 
 	const stepDescription = createElement("p", "wrap-paragraph");
-	stepDescription.innerHTML =
-		"No matter which data structure is best for<br>your business, you can easily define models<br>and add relations to create rich layout<br>experiences.";
+	stepDescription.textContent =
+		"No matter which data structure is best for your business, you can easily define models and add relations to create rich layout experiences.";
 	rightContent.appendChild(stepDescription);
 }
 
