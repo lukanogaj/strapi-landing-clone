@@ -1,0 +1,370 @@
+@import url('//use.fontawesome.com/releases/v5.15.3/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: rgb(18, 18, 125);
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Top menu and header css */
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: centre;
+}
+
+.top-menu {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  list-style-type: none;
+  margin: 0 22rem 0 22rem;
+  padding: 0;
+}
+
+.list-item {
+  padding: 20px;
+  letter-spacing: 0.1rem;
+  color: #fff;
+}
+
+.strapi-logo {
+  display: inline-block;
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+/* Buttons top menu */
+.gitHubBtn {
+  width: 60px;
+  height: 20px;
+  background-color: #fff;
+  border: none;
+  margin: 5px;
+  border-radius: 2px;
+  color: #333;
+}
+
+.getstarted-btn {
+  display: block;
+  height: 43px;
+  width: 150px;
+  border: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #181793;
+}
+
+.icon {
+  background-color: green;
+  width: 80px;
+  height: 80px;
+  color: white;
+}
+
+/*  Div hero  */
+
+.hero {
+  width: 63%;
+  margin: auto;
+}
+
+/*  the top row with div new look like button */
+.new-span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin-top: 40px;
+}
+
+.new-btn {
+  display: flex;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  padding-left: 8px;
+  margin-right: 7px;
+  background-color: #8c4bff;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.paragrh1 {
+  display: flex;
+  width: 190px;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  font-size: 15px;
+  color: #c0c0cf;
+}
+
+.href1 {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  color: #c092fe;
+}
+
+.href1 a {
+  display: block;
+  padding-top: 12px;
+}
+
+/* Headings with the animation divs and input */
+.head1 {
+  display: block;
+  width: 700px;
+  text-align: center;
+  margin: auto;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  color: #fff;
+}
+
+.head2 {
+  display: block;
+  width: 780px;
+  text-align: center;
+  margin: auto;
+  padding-top: 50px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #807fb1;
+}
+
+.input-api {
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-top: 4rem;
+  width: 410px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #040a44;
+}
+
+::placeholder {
+  color: #fff;
+  letter-spacing: 0.1rem;
+  font-size: 14px;
+}
+
+/* Btns below api */
+.api-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  padding-top: 7px;
+  width: 440px;
+}
+
+.btn-demo {
+  display: block;
+  height: 43px;
+  width: 240px;
+  border: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #181793;
+}
+
+/* The animation divs */
+.animation-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: centre;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.animation-first {
+  width: 58%;
+  height: 500px;
+  border: solid 6px #7170b2;
+  border-radius: 7px;
+  background-color: #fff;
+}
+.animation-second {
+  width: 40%;
+  height: 510px;
+  background-color: #040a44;
+  padding-left: 4px;
+  border: 6px #fff;
+  border-radius: 5px;
+}
+
+/* Div with all logos */
+.logos-style {
+  display: flex;
+  flex: wrap;
+  justify-content: space-around;
+  margin: auto;
+  padding-top: 50px;
+  width: 80%;
+  height: 360px;
+}
+
+.logo-img {
+  display: block;
+  width: 60px;
+  height: 50px;
+  color: #fff;
+}
+
+/* Ibm seperate div */
+.ibm-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.ibm {
+  display: block;
+  width: 60px;
+  height: 50px;
+  color: #fff;
+}
+
+/* Wrapper div with the apps info */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+  margin-top: 140px;
+  width: 100%;
+  background-color: #ffff;
+}
+
+.wrapper-headings {
+  display: block;
+  text-align: center;
+  width: 68%;
+  margin-top: 100px;
+  background-color: #f5f9fe;
+}
+
+/* Styling for every single heading */
+.head-h5 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01rem;
+  color: #00b6c8;
+  margin-top: 10rem;
+}
+
+.head-h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  letter-spacing: 0.02rem;
+  color: #1c1b84;
+  margin-top: 50px;
+}
+
+.head-h3 {
+  font-size: 22px;
+  letter-spacing: 0.06rem;
+  font-weight: 500;
+  color: #344b80;
+}
+
+/* Div with the 4 divs and headings */
+.wrap-main-div {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 68%;
+  text-align: left;
+  background-color: #f5f9fe;
+}
+
+.wrapper-divs {
+  width: 100%;
+  height: 220px;
+  padding-left: 220px;
+}
+
+/* Headings ,paragraphs in 4 divs */
+.wrap-main-head {
+  font-size: 22px;
+  letter-spacing: 0.01rem;
+  color: #1c1b84;
+}
+
+.wrap-paragraph {
+  color: #1c1b84;
+  letter-spacing: 0.08rem;
+  line-height: 1.5rem;
+}
+
+/*  Step by step div and elements */
+.step-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  background-color: #fff;
+}
+
+.step-div-2 {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: auto;
+}
+.stepdiv-1 {
+  width: 50%;
+  height: 400px;
+}
+
+.stepdiv-2 {
+  height: 400px;
+  width: 50%;
+  text-align: left;
+  padding-left: 27rem;
+}
+
+/*  styling the heaidngs and paragraph in stepby step */
+.stepdiv-2 .head-h5 {
+  color: #f6b73d;
+  letter-spacing: 0.05rem;
+  font-weight: 400;
+  padding-bottom: 2.8rem;
+}
+
+.stepdiv-2 .wrap-paragraph {
+  padding-top: 1rem;
+}
