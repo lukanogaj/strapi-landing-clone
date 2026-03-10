@@ -8,9 +8,9 @@ export function renderHeader(container) {
 	const topMenu = createElement("ul", "top-menu");
 	header.appendChild(topMenu);
 
-	const logo = createElement("h2", "strapi-logo");
+	const logo = createElement("a", "strapi-logo");
 	logo.textContent = "strapi";
-	topMenu.appendChild(logo);
+	logo.href = "#hero";
 
 	menuItems.forEach((itemText) => {
 		const item = createElement("li", "list-item");
