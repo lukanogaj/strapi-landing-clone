@@ -48,7 +48,7 @@ export function renderHeader(container) {
 
 	const getStartedButton = createElement("button", "getstarted-btn");
 	getStartedButton.textContent = "Get Started";
-	topMenu.appendChild(getStartedButton);
+	headerButtons.appendChild(getStartedButton);
 
 	getStartedButton.addEventListener("click", () => {
 		window.location.href = "#steps";
