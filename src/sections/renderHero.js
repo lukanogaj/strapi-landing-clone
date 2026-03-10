@@ -48,6 +48,11 @@ export function renderHero(container) {
 
 	const secondaryButton = createElement("button", "btn-demo");
 	secondaryButton.textContent = "Try the live demo";
+
+	secondaryButton.addEventListener("click", () => {
+		window.open("https://strapi.io/demo", "_blank");
+	});
+
 	buttonGroup.appendChild(secondaryButton);
 
 	const animationWrapper = createElement("div", "animation-div");
