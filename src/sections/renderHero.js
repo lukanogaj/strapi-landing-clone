@@ -2,6 +2,7 @@ import { createElement } from "../utils/createElement.js";
 
 export function renderHero(container) {
 	const hero = createElement("section", "hero");
+	hero.id = "hero";
 	container.appendChild(hero);
 
 	const announcement = createElement("div", "new-span");
