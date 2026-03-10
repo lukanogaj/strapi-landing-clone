@@ -62,6 +62,7 @@ ul {
 }
 
 /* ===== Header ===== */
+/* ===== Header ===== */
 .header {
 	padding: 24px 24px 12px;
 	background: #f8f8ff;
@@ -81,14 +82,29 @@ ul {
 	line-height: 1;
 	color: #2b2e83;
 	margin-right: 12px;
+	flex-shrink: 0;
+}
+
+.top-menu-list {
+	display: flex;
+	align-items: center;
+	gap: 28px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 .list-item {
 	font-size: 1rem;
 	font-weight: 500;
 	color: #2b2e83;
-	cursor: pointer;
 	white-space: nowrap;
+}
+
+.list-item a {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
 }
 
 .header-btn {
@@ -484,6 +500,11 @@ ul {
 		row-gap: 16px;
 	}
 
+	.top-menu-list {
+		flex-wrap: wrap;
+		row-gap: 12px;
+	}
+
 	.header-btn {
 		margin-left: 0;
 	}
@@ -526,12 +547,19 @@ ul {
 	}
 
 	.top-menu {
-		gap: 36px;
+		gap: 20px;
 	}
 
 	.strapi-logo {
 		font-size: 1.7rem;
 		width: 100%;
+		margin-right: 0;
+	}
+
+	.top-menu-list {
+		width: 100%;
+		gap: 18px;
+		flex-wrap: wrap;
 	}
 
 	.list-item {
