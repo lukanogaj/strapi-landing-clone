@@ -13,6 +13,9 @@ export function renderHeader(container) {
 	logo.href = "#hero";
 	topMenu.appendChild(logo);
 
+	const navList = createElement("ul", "top-menu-list");
+	topMenu.appendChild(navList);
+
 	menuItems.forEach((itemText) => {
 		const item = createElement("li", "list-item");
 
@@ -21,7 +24,7 @@ export function renderHeader(container) {
 		link.href = `#${itemText.toLowerCase()}`;
 
 		item.appendChild(link);
-		topMenu.appendChild(item);
+		navList.appendChild(item);
 	});
 
 	const headerButtons = createElement("div", "header-btn");
