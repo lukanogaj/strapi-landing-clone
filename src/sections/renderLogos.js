@@ -8,21 +8,19 @@ export function renderLogos(container) {
 	const logosInner = createElement("div", "logos-inner");
 	logosSection.appendChild(logosInner);
 
-	companyLogos.forEach((logoPath) => {
+	const logosTrack = createElement("div", "logos-track");
+	logosInner.appendChild(logosTrack);
+
+	const duplicatedLogos = companyLogos.concat(companyLogos);
+
+	duplicatedLogos.forEach((logoPath) => {
 		const logoItem = createElement("div", "logo-item");
-		logosInner.appendChild(logoItem);
+		logosTrack.appendChild(logoItem);
 
 		const logo = createElement("img", "logo-img");
 		logo.src = logoPath;
 		logo.alt = "Company logo";
+
 		logoItem.appendChild(logo);
 	});
-
-	const ibmItem = createElement("div", "logo-item");
-	logosInner.appendChild(ibmItem);
-
-	const ibmLogo = createElement("img", "logo-img");
-	ibmLogo.src = "./img-logos/ibm.png";
-	ibmLogo.alt = "IBM logo";
-	ibmItem.appendChild(ibmLogo);
 }

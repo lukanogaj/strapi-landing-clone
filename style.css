@@ -11,7 +11,7 @@ html {
 
 body {
 	font-family: Arial, sans-serif;
-	background: #f8f8ff;
+	background: #f4f6fb;
 	color: #1f1f5c;
 }
 
@@ -247,64 +247,42 @@ ul {
 
 /* ===== Logos section ===== */
 .logos-section {
-	background: #1f1f9b;
-	padding-top: 40px;
-	padding-bottom: 40px;
+	background: #ffffff;
+	padding: 40px 0;
+	overflow: hidden;
+	border-top: 1px solid #eceefe;
+	border-bottom: 1px solid #eceefe;
 }
+
 .logos-inner {
-	max-width: 1200px;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-	gap: 32px 24px;
+	display: flex;
 	align-items: center;
-	justify-items: center;
+	overflow: hidden;
+	width: 100%;
+}
+.logos-track {
+	display: flex;
+	width: max-content;
+	align-items: center;
+	gap: 80px;
+
+	animation: scroll-logos 35s linear infinite;
 }
 
 .logo-item {
-	width: 100%;
-	min-height: 56px;
+	flex: 0 0 auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
 .logo-img {
-	height: 28px;
+	height: 32px;
 	width: auto;
-	max-width: 120px;
 	object-fit: contain;
 	opacity: 0.82;
-	filter: grayscale(100%) brightness(1.15);
+	filter: grayscale(100%) brightness(1.05);
 }
-
-.logos-inner {
-	max-width: 1200px;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-	gap: 32px 24px;
-	align-items: center;
-	justify-items: center;
-}
-
-.logo-item {
-	width: 100%;
-	min-height: 56px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.logo-img {
-	height: 28px;
-	width: auto;
-	max-width: 120px;
-	object-fit: contain;
-	opacity: 0.82;
-	filter: grayscale(100%) brightness(1.15);
-}
-
 /* ===== Features section ===== */
 .wrapper {
 	background: #f3f5ff;
@@ -536,10 +514,6 @@ ul {
 		margin-left: 0;
 	}
 
-	.logos-inner {
-		grid-template-columns: repeat(4, minmax(120px, 1fr));
-	}
-
 	.features-grid,
 	.steps-layout,
 	.animation-div {
@@ -609,13 +583,12 @@ ul {
 	}
 
 	.logos-inner {
-		grid-template-columns: repeat(2, minmax(120px, 1fr));
-		gap: 24px 16px;
+		gap: 56px;
 	}
 
 	.logo-img {
-		max-height: 28px;
-		width: auto;
+		max-height: none;
+		height: 26px;
 	}
 
 	.head1,
@@ -651,5 +624,14 @@ ul {
 
 	.mock-row {
 		grid-template-columns: 1fr;
+	}
+}
+
+@keyframes scroll-logos {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
 	}
 }
