@@ -14,7 +14,12 @@ export function renderHeader(container) {
 
 	menuItems.forEach((itemText) => {
 		const item = createElement("li", "list-item");
-		item.textContent = itemText;
+
+		const link = createElement("a");
+		link.textContent = itemText;
+		link.href = `#${itemText.toLowerCase()}`;
+
+		item.appendChild(link);
 		topMenu.appendChild(item);
 	});
 
