@@ -5,12 +5,13 @@ export function renderHeader(container) {
 	const header = createElement("header", "header");
 	container.appendChild(header);
 
-	const topMenu = createElement("ul", "top-menu");
+	const topMenu = createElement("nav", "top-menu");
 	header.appendChild(topMenu);
 
 	const logo = createElement("a", "strapi-logo");
 	logo.textContent = "strapi";
 	logo.href = "#hero";
+	topMenu.appendChild(logo);
 
 	menuItems.forEach((itemText) => {
 		const item = createElement("li", "list-item");
