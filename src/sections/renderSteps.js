@@ -2,6 +2,7 @@ import { createElement } from "../utils/createElement.js";
 
 export function renderSteps(container) {
 	const stepsSection = createElement("section", "steps-section");
+	stepsSection.id = "steps";
 	container.appendChild(stepsSection);
 
 	const stepsHeadings = createElement("div", "steps-headings");
