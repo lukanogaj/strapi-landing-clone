@@ -37,4 +37,11 @@ export function renderHeader(container) {
 	const getStartedButton = createElement("button", "getstarted-btn");
 	getStartedButton.textContent = "Get Started";
 	topMenu.appendChild(getStartedButton);
+
+	gitHubIconButton.addEventListener("click", () => {
+		window.open("https://github.com/YOUR_REPO", "_blank");
+	});
+	gitHubCountButton.addEventListener("click", () => {
+		window.open("https://github.com/YOUR_REPO", "_blank");
+	});
 }
