@@ -251,8 +251,33 @@ ul {
 	padding-top: 40px;
 	padding-bottom: 40px;
 }
-
 .logos-inner {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: 32px 24px;
+	align-items: center;
+	justify-items: center;
+}
+
+.logo-item {
+	width: 100%;
+	min-height: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo-img {
+	height: 28px;
+	width: auto;
+	max-width: 120px;
+	object-fit: contain;
+	opacity: 0.82;
+	filter: grayscale(100%) brightness(1.15);
+}
+/* .logos-inner {
 	max-width: 1200px;
 	margin: 0 auto;
 	display: grid;
@@ -276,7 +301,7 @@ ul {
 	width: auto;
 	height: auto;
 	object-fit: contain;
-}
+} */
 
 /* ===== Features section ===== */
 .wrapper {
