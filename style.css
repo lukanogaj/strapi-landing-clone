@@ -62,7 +62,6 @@ ul {
 }
 
 /* ===== Header ===== */
-/* ===== Header ===== */
 .header {
 	padding: 24px 24px 12px;
 	background: #f8f8ff;
@@ -249,24 +248,36 @@ ul {
 .logos-section {
 	background: #ffffff;
 	padding: 40px 0;
-	overflow: hidden;
 	border-top: 1px solid #eceefe;
 	border-bottom: 1px solid #eceefe;
 }
 
-.logos-inner {
-	display: flex;
-	align-items: center;
-	overflow: hidden;
+.logos-viewport {
 	width: 100%;
+	overflow: hidden;
+	-webkit-mask-image: linear-gradient(
+		to right,
+		transparent,
+		black 10%,
+		black 90%,
+		transparent
+	);
+	mask-image: linear-gradient(
+		to right,
+		transparent,
+		black 10%,
+		black 90%,
+		transparent
+	);
 }
+
 .logos-track {
 	display: flex;
-	width: max-content;
 	align-items: center;
-	gap: 80px;
-
-	animation: scroll-logos 35s linear infinite;
+	width: max-content;
+	gap: 72px;
+	animation: scroll-logos 44s linear infinite;
+	will-change: transform;
 }
 
 .logo-item {
@@ -277,11 +288,12 @@ ul {
 }
 
 .logo-img {
+	display: block;
 	height: 32px;
 	width: auto;
 	object-fit: contain;
-	opacity: 0.82;
-	filter: grayscale(100%) brightness(1.05);
+	opacity: 0.78;
+	filter: grayscale(100%);
 }
 /* ===== Features section ===== */
 .wrapper {
@@ -499,6 +511,7 @@ ul {
 }
 
 /* ===== Responsive ===== */
+/* ===== Responsive ===== */
 @media (max-width: 1100px) {
 	.top-menu {
 		flex-wrap: wrap;
@@ -582,12 +595,11 @@ ul {
 		width: 100%;
 	}
 
-	.logos-inner {
-		gap: 56px;
+	.logos-track {
+		gap: 48px;
 	}
 
 	.logo-img {
-		max-height: none;
 		height: 26px;
 	}
 

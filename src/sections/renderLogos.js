@@ -2,25 +2,26 @@ import { createElement } from "../utils/createElement.js";
 import { companyLogos } from "../data/logosData.js";
 
 export function renderLogos(container) {
-	const logosSection = createElement("section", "logos-section");
-	container.appendChild(logosSection);
+	const section = createElement("section", "logos-section");
+	container.appendChild(section);
 
-	const logosInner = createElement("div", "logos-inner");
-	logosSection.appendChild(logosInner);
+	const viewport = createElement("div", "logos-viewport");
+	section.appendChild(viewport);
 
-	const logosTrack = createElement("div", "logos-track");
-	logosInner.appendChild(logosTrack);
+	const track = createElement("div", "logos-track");
+	viewport.appendChild(track);
 
-	const duplicatedLogos = companyLogos.concat(companyLogos);
+	const loopedLogos = [...companyLogos, ...companyLogos];
 
-	duplicatedLogos.forEach((logoPath) => {
-		const logoItem = createElement("div", "logo-item");
-		logosTrack.appendChild(logoItem);
+	loopedLogos.forEach((logoPath, index) => {
+		const item = createElement("div", "logo-item");
+		track.appendChild(item);
 
-		const logo = createElement("img", "logo-img");
-		logo.src = logoPath;
-		logo.alt = "Company logo";
+		const img = createElement("img", "logo-img");
+		img.src = logoPath;
+		img.alt = `Company logo ${index + 1}`;
+		img.loading = "lazy";
 
-		logoItem.appendChild(logo);
+		item.appendChild(img);
 	});
 }
