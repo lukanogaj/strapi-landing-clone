@@ -23,7 +23,7 @@ export function renderHero(container) {
 
 	const announcementLink = createElement("a", "hrefLink");
 	announcementLink.textContent = "Learn more";
-	announcementLink.href = "#";
+	announcementLink.href = "#steps";
 	announcementLinkWrapper.appendChild(announcementLink);
 
 	const heroTitle = createElement("h1", "head1");
