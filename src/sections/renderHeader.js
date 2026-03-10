@@ -30,18 +30,23 @@ export function renderHeader(container) {
 	gitHubIconButton.innerHTML = '<i class="fa-brands fa-github"></i>';
 	headerButtons.appendChild(gitHubIconButton);
 
+	gitHubIconButton.addEventListener("click", () => {
+		window.open("https://github.com/YOUR_REPO", "_blank");
+	});
+
 	const gitHubCountButton = createElement("button", "gitHubBtn");
 	gitHubCountButton.textContent = "298057";
 	headerButtons.appendChild(gitHubCountButton);
+
+	gitHubCountButton.addEventListener("click", () => {
+		window.open("https://github.com/YOUR_REPO", "_blank");
+	});
 
 	const getStartedButton = createElement("button", "getstarted-btn");
 	getStartedButton.textContent = "Get Started";
 	topMenu.appendChild(getStartedButton);
 
-	gitHubIconButton.addEventListener("click", () => {
-		window.open("https://github.com/YOUR_REPO", "_blank");
-	});
-	gitHubCountButton.addEventListener("click", () => {
-		window.open("https://github.com/YOUR_REPO", "_blank");
+	getStartedButton.addEventListener("click", () => {
+		window.location.href = "#steps";
 	});
 }
