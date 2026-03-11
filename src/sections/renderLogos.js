@@ -24,6 +24,12 @@ function getLogoAltText(path) {
 	return fileName.replace(/-/g, " ");
 }
 
+function setLoopDistance(track, firstGroup) {
+	const groupWidth = firstGroup.offsetWidth;
+	track.style.setProperty("--loop-distance", `-${groupWidth}px`);
+	track.classList.add("is-ready");
+}
+
 export function renderLogos(container) {
 	const section = createElement("section", "logos-section");
 	container.appendChild(section);
@@ -36,7 +42,17 @@ export function renderLogos(container) {
 
 	const firstGroup = createLogoGroup(companyLogos);
 	const secondGroup = createLogoGroup(companyLogos);
+	const thirdGroup = createLogoGroup(companyLogos);
+
+	secondGroup.setAttribute("aria-hidden", "true");
+	thirdGroup.setAttribute("aria-hidden", "true");
 
 	track.appendChild(firstGroup);
 	track.appendChild(secondGroup);
+	track.appendChild(thirdGroup);
+
+	const startCarousel = () => setLoopDistance(track, firstGroup);
+
+	requestAnimationFrame(startCarousel);
+	window.addEventListener("resize", () => setLoopDistance(track, firstGroup));
 }

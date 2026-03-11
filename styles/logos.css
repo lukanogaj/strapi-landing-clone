@@ -1,4 +1,3 @@
-/* ===== Logos section ===== */
 .logos-section {
 	background: #ffffff;
 	padding: 40px 0;
@@ -9,35 +8,24 @@
 .logos-viewport {
 	width: 100%;
 	overflow: hidden;
-	-webkit-mask-image: linear-gradient(
-		to right,
-		transparent,
-		black 10%,
-		black 90%,
-		transparent
-	);
-	mask-image: linear-gradient(
-		to right,
-		transparent,
-		black 10%,
-		black 90%,
-		transparent
-	);
 }
 
 .logos-track {
 	display: flex;
+	align-items: center;
 	width: max-content;
-	animation: scroll-logos 36s linear infinite;
 	will-change: transform;
+}
+
+.logos-track.is-ready {
+	animation: scroll-logos 42s linear infinite;
 }
 
 .logos-group {
 	display: flex;
 	align-items: center;
 	flex-shrink: 0;
-	gap: 72px;
-	padding-right: 72px;
+	gap: 96px;
 }
 
 .logo-item {
@@ -51,17 +39,26 @@
 	display: block;
 	height: 32px;
 	width: auto;
-	max-width: none;
 	object-fit: contain;
 	opacity: 0.78;
 	filter: grayscale(100%);
 }
 
+@media (max-width: 768px) {
+	.logos-group {
+		gap: 40px;
+	}
+
+	.logo-img {
+		height: 26px;
+	}
+}
+
 @keyframes scroll-logos {
 	from {
-		transform: translateX(0);
+		transform: translate3d(0, 0, 0);
 	}
 	to {
-		transform: translateX(-50%);
+		transform: translate3d(var(--loop-distance), 0, 0);
 	}
 }
