@@ -357,3 +357,15 @@
 .hero-api-response-line-medium {
 	width: 62%;
 }
+.animation-first,
+.animation-second {
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease;
+}
+
+.animation-first:hover,
+.animation-second:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 30px 60px rgba(60, 70, 160, 0.15);
+}
