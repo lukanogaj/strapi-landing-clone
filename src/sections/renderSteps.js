@@ -27,51 +27,54 @@ export function renderSteps(container) {
 	const leftVisual = createElement("div", "steps-visual");
 	stepsContent.appendChild(leftVisual);
 
-	const mockWindow = createElement("div", "mock-window");
+	const mockWindow = createElement("div", "steps-mock-window");
 	leftVisual.appendChild(mockWindow);
 
-	const mockTopbar = createElement("div", "mock-topbar");
+	const mockTopbar = createElement("div", "steps-mock-topbar");
 	mockWindow.appendChild(mockTopbar);
 
-	const mockDots = createElement("div", "mock-dots");
+	const mockDots = createElement("div", "steps-mock-dots");
 	mockTopbar.appendChild(mockDots);
 
 	for (let i = 0; i < 3; i += 1) {
-		const dot = createElement("span", "mock-dot");
+		const dot = createElement("span", "steps-mock-dot");
 		mockDots.appendChild(dot);
 	}
 
-	const mockLayout = createElement("div", "mock-layout");
+	const mockLayout = createElement("div", "steps-mock-layout");
 	mockWindow.appendChild(mockLayout);
 
-	const mockSidebar = createElement("div", "mock-sidebar");
+	const mockSidebar = createElement("div", "steps-mock-sidebar");
 	mockLayout.appendChild(mockSidebar);
 
 	for (let i = 0; i < 5; i += 1) {
-		const sidebarLine = createElement("div", "mock-sidebar-line");
+		const sidebarLine = createElement("div", "steps-mock-sidebar-line");
 		mockSidebar.appendChild(sidebarLine);
 	}
 
-	const mockContent = createElement("div", "mock-content");
+	const mockContent = createElement("div", "steps-mock-content");
 	mockLayout.appendChild(mockContent);
 
-	const mockBadge = createElement("div", "mock-badge");
+	const mockBadge = createElement("div", "steps-mock-badge");
 	mockBadge.textContent = "Content Type Builder";
 	mockContent.appendChild(mockBadge);
 
-	const mockHeading = createElement("div", "mock-heading");
+	const mockHeading = createElement("div", "steps-mock-heading");
 	mockContent.appendChild(mockHeading);
 
-	const mockRow = createElement("div", "mock-row");
+	const mockRow = createElement("div", "steps-mock-row");
 	mockContent.appendChild(mockRow);
 
-	const mockCardPrimary = createElement("div", "mock-card mock-card-primary");
+	const mockCardPrimary = createElement(
+		"div",
+		"steps-mock-card steps-mock-card-primary",
+	);
 	mockRow.appendChild(mockCardPrimary);
 
-	const mockCardSecondary = createElement("div", "mock-card");
+	const mockCardSecondary = createElement("div", "steps-mock-card");
 	mockRow.appendChild(mockCardSecondary);
 
-	const mockFooterLine = createElement("div", "mock-footer-line");
+	const mockFooterLine = createElement("div", "steps-mock-footer-line");
 	mockContent.appendChild(mockFooterLine);
 
 	const rightContent = createElement("div", "steps-text");
@@ -81,12 +84,12 @@ export function renderSteps(container) {
 	stepNumber.textContent = "Step 1";
 	rightContent.appendChild(stepNumber);
 
-	const stepHeading = createElement("h3", "wrap-main-head");
+	const stepHeading = createElement("h3", "feature-card-title");
 	stepHeading.textContent =
 		"Effortlessly create content structures that flex to your needs";
 	rightContent.appendChild(stepHeading);
 
-	const stepDescription = createElement("p", "wrap-paragraph");
+	const stepDescription = createElement("p", "feature-card-description");
 	stepDescription.textContent =
 		"No matter which data structure is best for your business, you can easily define models and add relations to create rich layout experiences.";
 	rightContent.appendChild(stepDescription);
