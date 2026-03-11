@@ -8,10 +8,10 @@ function createLogoGroup(logos) {
 		const item = createElement("div", "logo-item");
 		group.appendChild(item);
 
-		const img = createElement("img", "logo-img");
-		img.src = logoPath;
-		img.alt = getLogoAltText(logoPath);
-		item.appendChild(img);
+		const image = createElement("img", "logo-img");
+		image.src = logoPath;
+		image.alt = getLogoAltText(logoPath);
+		item.appendChild(image);
 	});
 
 	return group;
@@ -29,14 +29,14 @@ function setLoopDistance(track, firstGroup) {
 }
 
 export function renderLogos(container) {
-	const section = createElement("section", "logos-section");
-	container.appendChild(section);
+	const logosSection = createElement("section", "logos-section");
+	container.appendChild(logosSection);
 
-	const viewport = createElement("div", "logos-viewport");
-	section.appendChild(viewport);
+	const logosViewport = createElement("div", "logos-viewport");
+	logosSection.appendChild(logosViewport);
 
-	const track = createElement("div", "logos-track");
-	viewport.appendChild(track);
+	const logosTrack = createElement("div", "logos-track");
+	logosViewport.appendChild(logosTrack);
 
 	const firstGroup = createLogoGroup(companyLogos);
 	const secondGroup = createLogoGroup(companyLogos);
@@ -45,19 +45,21 @@ export function renderLogos(container) {
 	secondGroup.setAttribute("aria-hidden", "true");
 	thirdGroup.setAttribute("aria-hidden", "true");
 
-	track.appendChild(firstGroup);
-	track.appendChild(secondGroup);
-	track.appendChild(thirdGroup);
+	logosTrack.appendChild(firstGroup);
+	logosTrack.appendChild(secondGroup);
+	logosTrack.appendChild(thirdGroup);
 
 	const images = firstGroup.querySelectorAll("img");
 
-	Promise.all([...images].map((img) => img.decode().catch(() => {}))).then(
+	Promise.all([...images].map((image) => image.decode().catch(() => {}))).then(
 		() => {
 			requestAnimationFrame(() => {
-				setLoopDistance(track, firstGroup);
+				setLoopDistance(logosTrack, firstGroup);
 			});
 		},
 	);
 
-	window.addEventListener("resize", () => setLoopDistance(track, firstGroup));
+	window.addEventListener("resize", () =>
+		setLoopDistance(logosTrack, firstGroup),
+	);
 }

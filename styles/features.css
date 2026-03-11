@@ -22,7 +22,15 @@
 }
 
 .feature-card-title {
+	margin-bottom: 12px;
+	font-size: 1.75rem;
+	line-height: 1.25;
+	font-weight: 700;
+	color: #22228f;
 }
 
 .feature-card-description {
+	font-size: 1.125rem;
+	line-height: 1.65;
+	color: #465b9b;
 }
