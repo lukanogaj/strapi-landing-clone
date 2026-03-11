@@ -145,10 +145,10 @@ export function renderHero(container) {
 	hero.id = "hero";
 	container.appendChild(hero);
 
-	const announcement = createElement("div", "new-span");
+	const announcement = createElement("div", "hero-announcement");
 	hero.appendChild(announcement);
 
-	const announcementBadge = createElement("div", "new-btn");
+	const announcementBadge = createElement("div", "hero-announcement-badge");
 	announcementBadge.textContent = "New";
 	announcement.appendChild(announcementBadge);
 
@@ -167,11 +167,11 @@ export function renderHero(container) {
 	announcementLink.href = "#steps";
 	announcementLinkWrapper.appendChild(announcementLink);
 
-	const heroTitle = createElement("h1", "head1");
+	const heroTitle = createElement("h1", "hero-title");
 	heroTitle.textContent = "Design APIs fast, manage content easily.";
 	hero.appendChild(heroTitle);
 
-	const heroSubtitle = createElement("h2", "head2");
+	const heroSubtitle = createElement("h2", "hero-subtitle");
 	heroSubtitle.textContent =
 		"Strapi is the leading open-source headless CMS. It's 100% JavaScript, fully customizable and developer-first.";
 	hero.appendChild(heroSubtitle);
@@ -180,7 +180,7 @@ export function renderHero(container) {
 	heroInput.placeholder = "npx create-strapi-app@latest my-project";
 	hero.appendChild(heroInput);
 
-	const buttonGroup = createElement("div", "api-buttons");
+	const buttonGroup = createElement("div", "hero-actions");
 	hero.appendChild(buttonGroup);
 
 	const primaryButton = createElement("button", "getstarted-btn");
@@ -196,15 +196,21 @@ export function renderHero(container) {
 
 	buttonGroup.appendChild(secondaryButton);
 
-	const animationWrapper = createElement("div", "animation-div");
+	const animationWrapper = createElement("div", "hero-visuals");
 	hero.appendChild(animationWrapper);
 
-	const animationFirst = createElement("div", "animation-first");
-	const animationSecond = createElement("div", "animation-second");
+	const dashboardCard = createElement(
+		"div",
+		"hero-visual-card hero-visual-card--dashboard",
+	);
+	const apiCard = createElement(
+		"div",
+		"hero-visual-card hero-visual-card--api",
+	);
 
-	animationFirst.appendChild(createDashboardMock());
-	animationSecond.appendChild(createApiMock());
+	dashboardCard.appendChild(createDashboardMock());
+	apiCard.appendChild(createApiMock());
 
-	animationWrapper.appendChild(animationFirst);
-	animationWrapper.appendChild(animationSecond);
+	animationWrapper.appendChild(dashboardCard);
+	animationWrapper.appendChild(apiCard);
 }

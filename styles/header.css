@@ -4,7 +4,7 @@
 	background: #f8f8ff;
 }
 
-.top-menu {
+.header-nav {
 	max-width: 1200px;
 	margin: 0 auto;
 	display: flex;
@@ -21,7 +21,7 @@
 	flex-shrink: 0;
 }
 
-.top-menu-list {
+.header-nav-list {
 	display: flex;
 	align-items: center;
 	gap: 28px;
@@ -30,27 +30,27 @@
 	list-style: none;
 }
 
-.list-item {
+.header-nav-item {
 	font-size: 1rem;
 	font-weight: 500;
 	color: #2b2e83;
 	white-space: nowrap;
 }
 
-.list-item a {
+.header-nav-item a {
 	display: inline-block;
 	text-decoration: none;
 	color: inherit;
 }
 
-.header-btn {
+.header-actions {
 	margin-left: auto;
 	display: flex;
 	align-items: center;
 	gap: 10px;
 }
 
-.gitHubBtn {
+.github-button {
 	height: 40px;
 	padding: 0 14px;
 	border: 1px solid #d7daf4;

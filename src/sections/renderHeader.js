@@ -5,42 +5,42 @@ export function renderHeader(container) {
 	const header = createElement("header", "header");
 	container.appendChild(header);
 
-	const topMenu = createElement("nav", "top-menu");
-	header.appendChild(topMenu);
+	const headerNav = createElement("nav", "header-nav");
+	header.appendChild(headerNav);
 
 	const logo = createElement("a", "strapi-logo");
 	logo.textContent = "strapi";
 	logo.href = "#hero";
-	topMenu.appendChild(logo);
+	headerNav.appendChild(logo);
 
-	const navList = createElement("ul", "top-menu-list");
-	topMenu.appendChild(navList);
+	const navList = createElement("ul", "header-nav-list");
+	headerNav.appendChild(navList);
 
 	menuItems.forEach((itemText) => {
-		const item = createElement("li", "list-item");
+		const navItem = createElement("li", "header-nav-item");
 
 		const link = createElement("a");
 		link.textContent = itemText;
 		link.href = `#${itemText.toLowerCase()}`;
 
-		item.appendChild(link);
-		navList.appendChild(item);
+		navItem.appendChild(link);
+		navList.appendChild(navItem);
 	});
 
-	const headerButtons = createElement("div", "header-btn");
-	topMenu.appendChild(headerButtons);
+	const headerActions = createElement("div", "header-actions");
+	headerNav.appendChild(headerActions);
 
-	const gitHubIconButton = createElement("button", "gitHubBtn");
+	const gitHubIconButton = createElement("button", "github-button");
 	gitHubIconButton.innerHTML = '<i class="fa-brands fa-github"></i>';
-	headerButtons.appendChild(gitHubIconButton);
+	headerActions.appendChild(gitHubIconButton);
 
 	gitHubIconButton.addEventListener("click", () => {
 		window.open("https://github.com/YOUR_REPO", "_blank");
 	});
 
-	const gitHubCountButton = createElement("button", "gitHubBtn");
+	const gitHubCountButton = createElement("button", "github-button");
 	gitHubCountButton.textContent = "298057";
-	headerButtons.appendChild(gitHubCountButton);
+	headerActions.appendChild(gitHubCountButton);
 
 	gitHubCountButton.addEventListener("click", () => {
 		window.open("https://github.com/YOUR_REPO", "_blank");
@@ -48,7 +48,7 @@ export function renderHeader(container) {
 
 	const getStartedButton = createElement("button", "getstarted-btn");
 	getStartedButton.textContent = "Get Started";
-	headerButtons.appendChild(getStartedButton);
+	headerActions.appendChild(getStartedButton);
 
 	getStartedButton.addEventListener("click", () => {
 		window.location.href = "#steps";
