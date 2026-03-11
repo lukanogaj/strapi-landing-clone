@@ -1,0 +1,61 @@
+/* ===== Header ===== */
+.header {
+	padding: 24px 24px 12px;
+	background: #f8f8ff;
+}
+
+.top-menu {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	gap: 28px;
+}
+
+.strapi-logo {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1;
+	color: #2b2e83;
+	margin-right: 12px;
+	flex-shrink: 0;
+}
+
+.top-menu-list {
+	display: flex;
+	align-items: center;
+	gap: 28px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.list-item {
+	font-size: 1rem;
+	font-weight: 500;
+	color: #2b2e83;
+	white-space: nowrap;
+}
+
+.list-item a {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+.header-btn {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.gitHubBtn {
+	height: 40px;
+	padding: 0 14px;
+	border: 1px solid #d7daf4;
+	border-radius: 10px;
+	background: #ffffff;
+	color: #2b2e83;
+	cursor: pointer;
+}

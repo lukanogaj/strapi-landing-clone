@@ -1,0 +1,67 @@
+/* ===== Logos section ===== */
+.logos-section {
+	background: #ffffff;
+	padding: 40px 0;
+	border-top: 1px solid #eceefe;
+	border-bottom: 1px solid #eceefe;
+}
+
+.logos-viewport {
+	width: 100%;
+	overflow: hidden;
+	-webkit-mask-image: linear-gradient(
+		to right,
+		transparent,
+		black 10%,
+		black 90%,
+		transparent
+	);
+	mask-image: linear-gradient(
+		to right,
+		transparent,
+		black 10%,
+		black 90%,
+		transparent
+	);
+}
+
+.logos-track {
+	display: flex;
+	width: max-content;
+	animation: scroll-logos 36s linear infinite;
+	will-change: transform;
+}
+
+.logos-group {
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	gap: 72px;
+	padding-right: 72px;
+}
+
+.logo-item {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo-img {
+	display: block;
+	height: 32px;
+	width: auto;
+	max-width: none;
+	object-fit: contain;
+	opacity: 0.78;
+	filter: grayscale(100%);
+}
+
+@keyframes scroll-logos {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}

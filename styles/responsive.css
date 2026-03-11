@@ -1,0 +1,128 @@
+/* ===== Responsive ===== */
+@media (max-width: 1100px) {
+	.top-menu {
+		flex-wrap: wrap;
+		row-gap: 16px;
+	}
+
+	.top-menu-list {
+		flex-wrap: wrap;
+		row-gap: 12px;
+	}
+
+	.header-btn {
+		margin-left: 0;
+	}
+
+	.features-grid,
+	.steps-layout,
+	.animation-div {
+		grid-template-columns: 1fr;
+	}
+
+	.steps-visual {
+		min-height: 280px;
+	}
+
+	.head1 {
+		font-size: 3.2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.header {
+		padding-inline: 20px;
+	}
+
+	.hero,
+	.logos-section,
+	.wrapper,
+	.steps-section {
+		padding-inline: 20px;
+	}
+
+	.wrapper,
+	.steps-section {
+		padding-top: 72px;
+		padding-bottom: 72px;
+	}
+
+	.top-menu {
+		gap: 20px;
+	}
+
+	.strapi-logo {
+		font-size: 1.7rem;
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.top-menu-list {
+		width: 100%;
+		gap: 18px;
+		flex-wrap: wrap;
+	}
+
+	.list-item {
+		font-size: 0.95rem;
+	}
+
+	.header-btn {
+		width: 100%;
+	}
+
+	.api-buttons {
+		flex-direction: column;
+		align-items: stretch;
+		width: 100%;
+	}
+
+	.getstarted-btn,
+	.btn-demo {
+		width: 100%;
+	}
+
+	.logos-group {
+		gap: 48px;
+		padding-right: 48px;
+	}
+
+	.logo-img {
+		height: 26px;
+	}
+
+	.head1,
+	.head-h1 {
+		font-size: 40px;
+	}
+
+	.head2,
+	.head-h3 {
+		font-size: 22px;
+	}
+
+	.wrap-main-head {
+		font-size: 26px;
+	}
+
+	.wrap-paragraph {
+		font-size: 18px;
+	}
+
+	.steps-visual {
+		padding: 16px;
+	}
+
+	.mock-layout {
+		grid-template-columns: 84px 1fr;
+		min-height: 220px;
+	}
+
+	.mock-content {
+		padding: 16px;
+	}
+
+	.mock-row {
+		grid-template-columns: 1fr;
+	}
+}

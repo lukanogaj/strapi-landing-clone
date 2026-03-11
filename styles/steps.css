@@ -1,0 +1,153 @@
+/* ===== Steps section ===== */
+.steps-section {
+	background: #f8f8ff;
+}
+
+.steps-headings {
+	max-width: 860px;
+	margin: 0 auto 64px;
+	text-align: center;
+}
+
+.steps-layout {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1.1fr 0.9fr;
+	gap: 56px;
+	align-items: start;
+}
+
+.steps-visual {
+	min-height: 360px;
+	border-radius: 20px;
+	background: linear-gradient(135deg, #eceefe 0%, #dde2ff 100%);
+	padding: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.steps-text {
+	padding-top: 24px;
+}
+
+/* ===== Step mock visual ===== */
+.mock-window {
+	width: 100%;
+	max-width: 520px;
+	border-radius: 18px;
+	background: #ffffff;
+	box-shadow: 0 20px 50px rgba(40, 44, 120, 0.08);
+	overflow: hidden;
+}
+
+.mock-topbar {
+	height: 48px;
+	padding: 0 16px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #eceefe;
+	background: #f8f8ff;
+}
+
+.mock-dots {
+	display: flex;
+	gap: 8px;
+}
+
+.mock-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #d6daf7;
+}
+
+.mock-layout {
+	display: grid;
+	grid-template-columns: 110px 1fr;
+	min-height: 280px;
+}
+
+.mock-sidebar {
+	padding: 18px 14px;
+	background: #f5f6ff;
+	border-right: 1px solid #eceefe;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.mock-sidebar-line {
+	height: 10px;
+	border-radius: 999px;
+	background: #dfe3fb;
+}
+
+.mock-sidebar-line:nth-child(1) {
+	width: 78%;
+}
+
+.mock-sidebar-line:nth-child(2) {
+	width: 100%;
+}
+
+.mock-sidebar-line:nth-child(3) {
+	width: 66%;
+}
+
+.mock-sidebar-line:nth-child(4) {
+	width: 88%;
+}
+
+.mock-sidebar-line:nth-child(5) {
+	width: 58%;
+}
+
+.mock-content {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.mock-badge {
+	align-self: flex-start;
+	padding: 6px 10px;
+	border-radius: 999px;
+	background: #f1f2ff;
+	color: #4945ff;
+	font-size: 0.82rem;
+	font-weight: 700;
+}
+
+.mock-heading {
+	width: 58%;
+	height: 18px;
+	border-radius: 999px;
+	background: #dfe3fb;
+}
+
+.mock-row {
+	display: grid;
+	grid-template-columns: 1.1fr 0.9fr;
+	gap: 14px;
+}
+
+.mock-card {
+	min-height: 120px;
+	border-radius: 16px;
+	background: #eef1ff;
+	border: 1px solid #e1e5fb;
+}
+
+.mock-card-primary {
+	background: linear-gradient(135deg, #4945ff 0%, #6c63ff 100%);
+}
+
+.mock-footer-line {
+	width: 72%;
+	height: 14px;
+	border-radius: 999px;
+	background: #dfe3fb;
+}
