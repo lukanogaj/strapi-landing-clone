@@ -11,8 +11,6 @@ function createLogoGroup(logos) {
 		const img = createElement("img", "logo-img");
 		img.src = logoPath;
 		img.alt = getLogoAltText(logoPath);
-		img.loading = "lazy";
-
 		item.appendChild(img);
 	});
 
@@ -51,8 +49,15 @@ export function renderLogos(container) {
 	track.appendChild(secondGroup);
 	track.appendChild(thirdGroup);
 
-	const startCarousel = () => setLoopDistance(track, firstGroup);
+	const images = firstGroup.querySelectorAll("img");
 
-	requestAnimationFrame(startCarousel);
+	Promise.all([...images].map((img) => img.decode().catch(() => {}))).then(
+		() => {
+			requestAnimationFrame(() => {
+				setLoopDistance(track, firstGroup);
+			});
+		},
+	);
+
 	window.addEventListener("resize", () => setLoopDistance(track, firstGroup));
 }
