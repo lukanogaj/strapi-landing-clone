@@ -1,30 +1,36 @@
 /* ===== Responsive ===== */
 @media (max-width: 1100px) {
-	.top-menu {
+	.header-nav {
 		flex-wrap: wrap;
 		row-gap: 16px;
 	}
 
-	.top-menu-list {
+	.header-nav-list {
 		flex-wrap: wrap;
 		row-gap: 12px;
 	}
 
-	.header-btn {
+	.header-actions {
 		margin-left: 0;
 	}
 
 	.features-grid,
 	.steps-layout,
-	.animation-div {
+	.hero-visuals {
 		grid-template-columns: 1fr;
+	}
+
+	.hero,
+	.features,
+	.steps-section {
+		padding-inline: 24px;
 	}
 
 	.steps-visual {
 		min-height: 280px;
 	}
 
-	.head1 {
+	.hero-title {
 		font-size: 3.2rem;
 	}
 }
@@ -36,7 +42,7 @@
 
 	.hero,
 	.logos-section,
-	.wrapper,
+	.features,
 	.steps-section {
 		padding-inline: 20px;
 	}
@@ -46,13 +52,13 @@
 		padding-bottom: 56px;
 	}
 
-	.wrapper,
+	.features,
 	.steps-section {
 		padding-top: 56px;
 		padding-bottom: 56px;
 	}
 
-	.top-menu {
+	.header-nav {
 		gap: 20px;
 	}
 
@@ -62,21 +68,21 @@
 		margin-right: 0;
 	}
 
-	.top-menu-list {
+	.header-nav-list {
 		width: 100%;
 		gap: 18px;
 		flex-wrap: wrap;
 	}
 
-	.list-item {
+	.header-nav-item {
 		font-size: 0.95rem;
 	}
 
-	.header-btn {
+	.header-actions {
 		width: 100%;
 	}
 
-	.new-span {
+	.hero-announcement {
 		flex-wrap: wrap;
 		row-gap: 8px;
 	}
@@ -86,7 +92,7 @@
 		font-size: 0.95rem;
 	}
 
-	.api-buttons {
+	.hero-actions {
 		flex-direction: column;
 		align-items: stretch;
 		width: 100%;
@@ -113,40 +119,42 @@
 		height: 26px;
 	}
 
-	.head1,
-	.head-h1 {
+	.hero-title,
+	.features-title,
+	.steps-headings .head-h1 {
 		font-size: 2.5rem;
 		line-height: 1.1;
 	}
 
-	.head2,
-	.head-h3 {
+	.hero-subtitle,
+	.features-subtitle,
+	.steps-headings .head-h3 {
 		font-size: 1.125rem;
 		line-height: 1.5;
 	}
 
-	.wrap-main-head {
-		font-size: 26px;
+	.feature-card-title {
+		font-size: 1.625rem;
 	}
 
-	.wrap-paragraph {
-		font-size: 18px;
+	.feature-card-description {
+		font-size: 1rem;
 	}
 
 	.steps-visual {
 		padding: 16px;
 	}
 
-	.mock-layout {
+	.steps-mock-layout {
 		grid-template-columns: 84px 1fr;
 		min-height: 220px;
 	}
 
-	.mock-content {
+	.steps-mock-content {
 		padding: 16px;
 	}
 
-	.mock-row {
+	.steps-mock-row {
 		grid-template-columns: 1fr;
 	}
 }
@@ -155,31 +163,33 @@
 	.header,
 	.hero,
 	.logos-section,
-	.wrapper,
+	.features,
 	.steps-section {
 		padding-inline: 18px;
 	}
 
-	.top-menu-list {
+	.header-nav-list {
 		gap: 14px;
 	}
 
-	.head1,
-	.head-h1 {
+	.hero-title,
+	.features-title,
+	.steps-headings .head-h1 {
 		font-size: 2.3rem;
 	}
 
-	.head2,
-	.head-h3 {
+	.hero-subtitle,
+	.features-subtitle,
+	.steps-headings .head-h3 {
 		font-size: 1.05rem;
 	}
 
-	.wrap-main-head {
-		font-size: 24px;
+	.feature-card-title {
+		font-size: 1.5rem;
 	}
 
-	.wrap-paragraph {
-		font-size: 17px;
+	.feature-card-description {
+		font-size: 0.98rem;
 	}
 
 	.logos-group {
@@ -191,7 +201,7 @@
 	.header,
 	.hero,
 	.logos-section,
-	.wrapper,
+	.features,
 	.steps-section {
 		padding-inline: 16px;
 	}
@@ -201,32 +211,34 @@
 		padding-bottom: 48px;
 	}
 
-	.wrapper,
+	.features,
 	.steps-section {
 		padding-top: 48px;
 		padding-bottom: 48px;
 	}
 
-	.top-menu {
+	.header-nav {
 		gap: 16px;
 	}
 
-	.top-menu-list {
+	.header-nav-list {
 		gap: 12px;
 	}
 
-	.list-item {
+	.header-nav-item {
 		font-size: 0.9rem;
 	}
 
-	.head1,
-	.head-h1 {
+	.hero-title,
+	.features-title,
+	.steps-headings .head-h1 {
 		font-size: 2.1rem;
 		line-height: 1.12;
 	}
 
-	.head2,
-	.head-h3 {
+	.hero-subtitle,
+	.features-subtitle,
+	.steps-headings .head-h3 {
 		font-size: 1rem;
 		line-height: 1.5;
 	}
@@ -236,12 +248,12 @@
 		font-size: 0.9rem;
 	}
 
-	.wrap-main-head {
-		font-size: 22px;
+	.feature-card-title {
+		font-size: 1.375rem;
 	}
 
-	.wrap-paragraph {
-		font-size: 16px;
+	.feature-card-description {
+		font-size: 0.95rem;
 	}
 
 	.logos-group {
@@ -258,17 +270,19 @@
 		font-size: 1.55rem;
 	}
 
-	.head1,
-	.head-h1 {
+	.hero-title,
+	.features-title,
+	.steps-headings .head-h1 {
 		font-size: 2rem;
 	}
 
-	.head2,
-	.head-h3 {
+	.hero-subtitle,
+	.features-subtitle,
+	.steps-headings .head-h3 {
 		font-size: 0.98rem;
 	}
 
-	.new-span {
+	.hero-announcement {
 		gap: 8px;
 		padding: 8px 10px;
 	}
@@ -277,12 +291,12 @@
 		padding: 14px;
 	}
 
-	.mock-layout {
+	.steps-mock-layout {
 		grid-template-columns: 72px 1fr;
 		min-height: 200px;
 	}
 
-	.mock-content {
+	.steps-mock-content {
 		padding: 14px;
 	}
 
@@ -295,27 +309,29 @@
 	.header,
 	.hero,
 	.logos-section,
-	.wrapper,
+	.features,
 	.steps-section {
 		padding-inline: 14px;
 	}
 
-	.top-menu-list {
+	.header-nav-list {
 		gap: 10px;
 	}
 
-	.list-item {
+	.header-nav-item {
 		font-size: 0.85rem;
 	}
 
-	.head1,
-	.head-h1 {
+	.hero-title,
+	.features-title,
+	.steps-headings .head-h1 {
 		font-size: 1.85rem;
 		line-height: 1.15;
 	}
 
-	.head2,
-	.head-h3 {
+	.hero-subtitle,
+	.features-subtitle,
+	.steps-headings .head-h3 {
 		font-size: 0.95rem;
 	}
 
@@ -330,12 +346,12 @@
 		min-height: 44px;
 	}
 
-	.wrap-main-head {
-		font-size: 20px;
+	.feature-card-title {
+		font-size: 1.25rem;
 	}
 
-	.wrap-paragraph {
-		font-size: 15px;
+	.feature-card-description {
+		font-size: 0.9rem;
 	}
 
 	.logos-group {
@@ -346,7 +362,7 @@
 		height: 22px;
 	}
 
-	.mock-layout {
+	.steps-mock-layout {
 		grid-template-columns: 64px 1fr;
 		min-height: 190px;
 	}
