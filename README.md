@@ -8,7 +8,7 @@ The project focuses on **modular DOM rendering, reusable utilities, and data-dri
 
 ## Live Demo
 
-_(to be added after GitHub Pages deployment)_
+https://lukanogaj.github.io/strapi-landing-clone/
 
 ---
 
