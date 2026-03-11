@@ -1,64 +1,81 @@
-# Strapi Landing Clone
+# Strapi Landing Page Clone
 
-A simplified recreation of the Strapi landing page built with **Vanilla JavaScript**, HTML, and CSS.
+A simplified recreation of the Strapi landing page built with **Vanilla JavaScript, HTML, and CSS**.
 
-The project focuses on **DOM manipulation, component-like rendering functions, and data-driven UI generation without frameworks**.
+The project focuses on **modular DOM rendering, reusable utilities, and data-driven UI generation without using frameworks**.
 
 ---
 
 ## Live Demo
 
-*(to be added after deployment)*
+_(to be added after GitHub Pages deployment)_
 
 ---
 
 ## Features
 
-* Dynamic DOM creation using JavaScript
-* Reusable element creation utility
-* Section-based rendering architecture
-* Data-driven content generation
-* Modular refactor planned for scalability
+- Modular section-based rendering (Header, Hero, Logos, Features, Steps)
+- Dynamic DOM creation using a reusable `createElement` utility
+- Data-driven UI generation using separate data files
+- Infinite scrolling company logos carousel
+- Responsive layout for desktop, tablet, and mobile
+- Clean component-like architecture using ES modules
 
 ---
 
 ## Tech Stack
 
-* JavaScript (Vanilla)
-* HTML5
-* CSS3
+- JavaScript (Vanilla, ES Modules)
+- HTML5
+- CSS3
 
 ---
 
-## Project Structure (current)
+## Project Structure
 
-```
+```text
 strapi-landing-clone
 │
 ├── index.html
-├── style.css
-├── app.js
+├── main.js
+│
+├── src
+│   ├── data
+│   │   ├── featuresData.js
+│   │   └── logosData.js
+│   │
+│   ├── sections
+│   │   ├── renderHeader.js
+│   │   ├── renderHero.js
+│   │   ├── renderLogos.js
+│   │   ├── renderFeatures.js
+│   │   └── renderSteps.js
+│   │
+│   └── utils
+│       └── createElement.js
+│
+├── styles
+│   ├── base.css
+│   ├── header.css
+│   ├── hero.css
+│   ├── logos.css
+│   ├── features.css
+│   ├── steps.css
+│   └── responsive.css
+│
 └── img-logos
 ```
 
 ---
 
-## Future Improvements
-
-* Split logic into modules
-* Move UI data into separate files
-* Improve accessibility
-* Add responsive enhancements
-
----
-
 ## Purpose
 
-This project demonstrates **core frontend fundamentals** without relying on frameworks:
+This project demonstrates **core frontend fundamentals without frameworks**, including:
 
-* DOM manipulation
-* component-like architecture
-* data-driven UI rendering
+- DOM manipulation
+- reusable utilities
+- modular UI architecture
+- responsive layout design
 
 It is part of my portfolio while preparing for a **Junior Frontend Developer role**.
 
@@ -66,4 +83,4 @@ It is part of my portfolio while preparing for a **Junior Frontend Developer rol
 
 ## Author
 
-Lukasz Nogaj
+**Lukasz Nogaj**
