@@ -1,6 +1,29 @@
 import { createElement } from "../utils/createElement.js";
 import { companyLogos } from "../data/logosData.js";
 
+function createLogoGroup(logos) {
+	const group = createElement("div", "logos-group");
+
+	logos.forEach((logoPath) => {
+		const item = createElement("div", "logo-item");
+		group.appendChild(item);
+
+		const img = createElement("img", "logo-img");
+		img.src = logoPath;
+		img.alt = getLogoAltText(logoPath);
+		img.loading = "lazy";
+
+		item.appendChild(img);
+	});
+
+	return group;
+}
+
+function getLogoAltText(path) {
+	const fileName = path.split("/").pop()?.replace(".png", "") ?? "company-logo";
+	return fileName.replace(/-/g, " ");
+}
+
 export function renderLogos(container) {
 	const section = createElement("section", "logos-section");
 	container.appendChild(section);
@@ -11,17 +34,9 @@ export function renderLogos(container) {
 	const track = createElement("div", "logos-track");
 	viewport.appendChild(track);
 
-	const loopedLogos = [...companyLogos, ...companyLogos];
+	const firstGroup = createLogoGroup(companyLogos);
+	const secondGroup = createLogoGroup(companyLogos);
 
-	loopedLogos.forEach((logoPath, index) => {
-		const item = createElement("div", "logo-item");
-		track.appendChild(item);
-
-		const img = createElement("img", "logo-img");
-		img.src = logoPath;
-		img.alt = `Company logo ${index + 1}`;
-		img.loading = "lazy";
-
-		item.appendChild(img);
-	});
+	track.appendChild(firstGroup);
+	track.appendChild(secondGroup);
 }
