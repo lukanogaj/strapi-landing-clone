@@ -1,3 +1,4 @@
+
 import { createElement } from "../utils/createElement.js";
 import { companyLogos } from "../data/logosData.js";
 
@@ -49,15 +50,10 @@ export function renderLogos(container) {
 	logosTrack.appendChild(secondGroup);
 	logosTrack.appendChild(thirdGroup);
 
-	const images = firstGroup.querySelectorAll("img");
-
-	Promise.all([...images].map((image) => image.decode().catch(() => {}))).then(
-		() => {
-			requestAnimationFrame(() => {
-				setLoopDistance(logosTrack, firstGroup);
-			});
-		},
-	);
+	// uproszczone – zamiast Promise + decode
+	window.addEventListener("load", () => {
+		setLoopDistance(logosTrack, firstGroup);
+	});
 
 	window.addEventListener("resize", () =>
 		setLoopDistance(logosTrack, firstGroup),
