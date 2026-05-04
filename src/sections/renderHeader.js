@@ -1,3 +1,4 @@
+
 import { createElement } from "../utils/createElement.js";
 import { menuItems } from "../data/menuData.js";
 
@@ -35,7 +36,10 @@ export function renderHeader(container) {
 	headerActions.appendChild(gitHubIconButton);
 
 	gitHubIconButton.addEventListener("click", () => {
-		window.open("https://github.com/YOUR_REPO", "_blank");
+		window.open(
+			"https://github.com/lukanogaj/strapi-landing-clone",
+			"_blank"
+		);
 	});
 
 	const gitHubCountButton = createElement("button", "github-button");
@@ -43,7 +47,10 @@ export function renderHeader(container) {
 	headerActions.appendChild(gitHubCountButton);
 
 	gitHubCountButton.addEventListener("click", () => {
-		window.open("https://github.com/YOUR_REPO", "_blank");
+		window.open(
+			"https://github.com/lukanogaj/strapi-landing-clone",
+			"_blank"
+		);
 	});
 
 	const getStartedButton = createElement("button", "getstarted-btn");
