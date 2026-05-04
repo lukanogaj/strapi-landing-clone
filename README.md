@@ -1,86 +1,49 @@
-# Strapi Landing Page Clone
+# JS Landing Builder
 
-A simplified recreation of the Strapi landing page built with **Vanilla JavaScript, HTML, and CSS**.
-
-The project focuses on **modular DOM rendering, reusable utilities, and data-driven UI generation without using frameworks**.
-
----
+Simple landing page built with vanilla JavaScript, HTML and CSS.
 
 ## Live Demo
 
-https://lukanogaj.github.io/strapi-landing-clone/
-
----
-
-## Features
-
-- Modular section-based rendering (Header, Hero, Logos, Features, Steps)
-- Dynamic DOM creation using a reusable `createElement` utility
-- Data-driven UI generation using separate data files
-- Infinite scrolling company logos carousel
-- Responsive layout for desktop, tablet, and mobile
-- Clean component-like architecture using ES modules
-
----
+https://lukanogaj.github.io/js-landing-builder/
 
 ## Tech Stack
 
-- JavaScript (Vanilla, ES Modules)
-- HTML5
-- CSS3
+* JavaScript (Vanilla)
+* HTML
+* CSS
 
----
+## What I did
+
+* created DOM elements using JavaScript
+* split page into small render functions (header, hero, features, logos, steps)
+* used data arrays to generate UI (features, menu, logos)
+* built simple reusable createElement helper
+* implemented basic responsive layout
 
 ## Project Structure
 
-```text
-strapi-landing-clone
-│
-├── index.html
-├── main.js
-│
-├── src
-│   ├── data
-│   │   ├── featuresData.js
-│   │   └── logosData.js
-│   │
-│   ├── sections
-│   │   ├── renderHeader.js
-│   │   ├── renderHero.js
-│   │   ├── renderLogos.js
-│   │   ├── renderFeatures.js
-│   │   └── renderSteps.js
-│   │
-│   └── utils
-│       └── createElement.js
-│
-├── styles
-│   ├── base.css
-│   ├── header.css
-│   ├── hero.css
-│   ├── logos.css
-│   ├── features.css
-│   ├── steps.css
-│   └── responsive.css
-│
-└── img-logos
-```
+The project is divided into small parts:
 
----
+* renderHeader
+* renderHero
+* renderFeatures
+* renderLogos
+* renderSteps
+
+Each section is rendered into the main container.
 
 ## Purpose
 
-This project demonstrates **core frontend fundamentals without frameworks**, including:
+This project was built to practice working with the DOM without using frameworks like React.
 
-- DOM manipulation
-- reusable utilities
-- modular UI architecture
-- responsive layout design
+## Run locally
 
-It is part of my portfolio while preparing for a **Junior Frontend Developer role**.
-
----
+```bash
+git clone https://github.com/lukanogaj/strapi-landing-clone
+cd strapi-landing-clone
+open index.html
+```
 
 ## Author
 
-**Lukasz Nogaj**
+Lukasz Nogaj
